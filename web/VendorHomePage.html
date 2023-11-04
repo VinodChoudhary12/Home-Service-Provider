@@ -1,10 +1,4 @@
-<%-- 
-    Document   : VendorHomePage
-    Created on : 01-Nov-2023, 10:34:20 pm
-    Author     : hp
---%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,6 +11,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="VendorHomePage.css">
 </head>
+<style>
+  th{
+    text-align: center;
+  }
+  tr{
+    text-align: center;
+  }
+</style>
 
 <body>
     
@@ -34,19 +36,19 @@
           
             
             <li class="nav-item">
-                <a class="nav-link active" id="navbar2" aria-current="page" href="VendorHomePage.jsp">Home</a>
+                <a class="nav-link active" id="navbar2" aria-current="page" href="VendorHomePage.html">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" id="navbar2" aria-current="page" href="Vendor_profile_page.jsp">Profile</a>
+                <a class="nav-link active" id="navbar2" aria-current="page" href="Vendor_profile_page.html">Profile</a>
             </li>
           <li class="nav-item">
-            <a class="nav-link active" id="navbar2" aria-current="page" href="VendorHomePage.jsp">Booking</a>
+            <a class="nav-link active" id="navbar2" aria-current="page" href="VendorHomePage.html">Booking</a>
           </li>
           <li class="nav-item">
-              <a class="nav-link active" id="navbar2" aria-current="page" href="CompletedWork.jsp">Completed Work</a>
+              <a class="nav-link active" id="navbar2" aria-current="page" href="CompletedWork.html">Completed Work</a>
           </li>
           <li class="nav-item">
-              <a class="nav-link active" id="navbar2" aria-current="page" href="History.jsp">History</a>
+              <a class="nav-link active" id="navbar2" aria-current="page" href="History.html">History</a>
           </li>
           
         </ul>
@@ -66,65 +68,60 @@
   </nav>
   <center>
 
-   <h2 style="margin-top: 40px;">All Bookings </h2>
+   <h2 style="margin-top: 40px; color: #FFC107;"> my All Bookings </h2>
 
 <div class="container mt-5">
 
 
-<table class="table table-hover" align="center" >
+<table class="table w-100 table table-hover table-bordered border" align="center" >
   <thead>
     <tr>
-      <th scope="col">SNo.</th>
+      <th scope="col">Order Number</th>
       <th scope="col">Name</th>
       <th scope="col">Mobile</th>
       <th scope="col">Date</th>
-      <th scope="col">Time</th>
+      <th scope="col">Time-slot</th>
       <th scope="col">Address</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th scope="row">1</th>
-      <td>xyz</td>
-      <td>xyz</td>
-      <td>xyz</td>
-      <td>xyz</td>
-      <td>xyz</td>
+      <th scope="row">111</th>
+      <td>Nihar Sahu</td>
+      <td>Plumber</td>
+      <td>03/11/2023</td>
+      <td>2:00PM - 4:00PM</td>
+      <td>Vijay Shree Nagar</td>
+      
      
       
     </tr>
     <tr>
-      <th scope="row">2</th>
-      <td>xyz</td>
-      <td>xyz</td>
-      <td>xyz</td>
-      <td>xyz</td>
-      <td>xyz</td>
+      <th scope="row">112</th>
+      <td>Vinod Choudhary</td>
+      <td>RO Repair</td>
+      <td>03/11/2023</td>
+      <td>12:00PM - 2:00PM</td>
+      <td>Bhagirath Pura</td>
      
     </tr>
     <tr>
-      <th scope="row">3</th>
-      <td >xyz</td>
-      <td>xyz</td>
-      <td>xyz</td>
-      <td>xyz</td>
-      <td>xyz</td>
+      <th scope="row">113</th>
+      <td>Shyam Tawar</td>
+      <td>Electrician</td>
+      <td>03/11/2023</td>
+      <td>10:00PM - 2:00PM</td>
+      <td>BhavarKua</td>
+      
     </tr>
     <tr>
-      <th scope="row">4</th>
-      <td >xyz</td>
-      <td>xyz</td>
-      <td>xyz</td>
-      <td>xyz</td>
-      <td>xyz</td>
-    </tr>
-    <tr>
-      <th scope="row">4</th>
-      <td >xyz</td>
-      <td>xyz</td>
-      <td>xyz</td>
-      <td>xyz</td>
-      <td>xyz</td>
+      <th scope="row">114</th>
+      <td >Savita Rajput</td>
+      <td>Painter</td>
+      <td>03/11/2023</td>
+      <td>10:00PM - 12:00PM</td>
+      <td>Navlakha</td>
+      
     </tr>
   </tbody>
 </table>
@@ -145,20 +142,7 @@
 
 
 
-  <div class="container mt-5">
-    <h2>
-      WHY HOME SERVICE PROVIDER?</h2> <br>
-      
-      <div class="row row-cols-lg-5 row-cols-md-2 row-cols-sm-2 row-cols-1 ">
-        
-        <div class="col"><img id="img1" class="img-fluid ms-1 " src="https://d27vg8jo26ejl7.cloudfront.net/images/why_joboy/On-Demand-Scheduled.webp" alt=""><p class="p-1 mt-2">ON DEMAND /
-                SCHEDULED</p></div>
-        <div class="col"><img id="img1" class="img-fluid ms-4 "  src="https://d27vg8jo26ejl7.cloudfront.net/images/why_joboy/Verified-Partners.webp" alt=""><p class="p-1 mt-2">VERIFIED PARTNERS</p></div>
-        <div class="col"><img id="img1" class="img-fluid ms-4 "  src="https://d27vg8jo26ejl7.cloudfront.net/images/why_joboy/Service-Warranty.webp" alt=""><p class="p-1 mt-2">SERVICE WARRANTY</p></div>
-        <div class="col"><img id="img1" class="img-fluid ms-4 "  src="https://d27vg8jo26ejl7.cloudfront.net/images/why_joboy/Transparent-Pricing.webp" alt=""><p class="p-1 mt-2">TRANSPARENT PRICING</p></div>
-        <div class="col"><img id="img1" class="img-fluid ms-4"  src="https://d27vg8jo26ejl7.cloudfront.net/images/why_joboy/Online-Payments.webp" alt=""><p class="p-1 mt-2">ONLINE PAYMENTS</p></div>
-      </div>
-  </div>
+ 
   <footer class="text-center text-lg-start bg-light text-muted">
     <!-- Section: Social media -->
    

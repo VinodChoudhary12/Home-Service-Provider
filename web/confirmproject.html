@@ -1,10 +1,4 @@
-<%-- 
-    Document   : confirmproject
-    Created on : 02-Nov-2023, 10:29:19 am
-    Author     : hp
---%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -167,17 +161,50 @@
         <div style="background:gray;height :30px;width: 30px;margin-left: 40px;border-radius: 50px;margin-top: 30px;position: absolute"></div>
         <h5 style="font-weight: 20px; margin-left: 80px;color: gray;width: 300px;height: 30px;margin-top: 30px;position: absolute">CASH ON DELIVERY</h5>
         <i class="fa-solid fa-angle-right"  style="margin-left: 750px;margin-top: 40px;width: 15px;height: 20px;"></i>
+
+
         <div style="background:gray;height :30px;width: 30px;margin-left: 40px;border-radius: 50px;margin-top: 60px"></div>
-        <h5 style="font-weight: 20px; margin-left: 80px;color: gray;width: 300px;height: 30px;margin-top: -20px">ONLINE PAYMENT</h5>
-        <i class="fa-solid fa-angle-right"  style="margin-left: 750px;width: 15px;height: 20px;"></i>
+
+
+        <h5 style="font-weight: 20px; margin-left: 80px;color: gray;width: 300px;height: 30px;margin-top: -29px">ONLINE PAYMENT</h5>
+        <i class="fa-solid fa-angle-right"  style="margin-left: 750px;width: 15px;height: 20px; margin-top: -23px;"></i>
           </div>
       </div>
      </div>
     </div>
+    
+    <div class="alert alert-success alert-dismissible fade show" role="alert" id="show1" style="display: none;">
+      <strong>Your Order</strong> Confirmed Seccussfully
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
+
      <center><div class="row row-cols-lg-1 row-cols-1 shadow-lg" id="btncom">
-             <center><button type="button" class="btn btn-warning ms-6" style="border-radius: 10px; font-weight: bold;width: 80%;margin-top: 20px;font-size: 20px;"><a id="ab" href="MyOrder.html">COMFIRM</a></button></center>
+             <center><button type="button" class="btn btn-warning ms-6" style="border-radius: 10px; font-weight: bold;width: 80%;margin-top: 20px;font-size: 20px; ;"><a id="ab"  style="text-decoration: none; color: black;" onclick="show()"  >COMFIRM</a></button></center>
       </div><center>
     </section>
+
    </body>
  </html>
+
+ <script>
+  
+
+        function show() {
+            // Button ko disable kar do, taki fir se click nahi ho sake
+            var ab = document.getElementById("ab");
+            ab.disabled = true;
+           var show1 = document.getElementById("show1")
+           
+           show1.style.display="block"
+
+
+            // 5 seconds (5000 milliseconds) ke baad MyOrder.html pe redirect hoga
+            setTimeout(function() {
+              show1.style.display="block"
+                window.location.href = "MyOrder.html";
+            }, 1000); // 5 seconds
+        }
+    
+
+
+ </script>
