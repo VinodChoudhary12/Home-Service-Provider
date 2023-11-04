@@ -1,10 +1,4 @@
-<%-- 
-    Document   : Admin_Edit_Vendor_Profile
-    Created on : 02-Nov-2023, 10:03:57 am
-    Author     : hp
---%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -21,6 +15,12 @@
     margin-left: 120px;
     border: 1px solid black ;
    
+    
+  }
+  a
+  {
+    text-decoration: none;
+    color: black;
     
   }
   #navbar2{
@@ -177,19 +177,19 @@
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
   
             <li class="nav-item">
-                <a class="nav-link active" id="navbar2" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" id="navbar2" aria-current="page" href="AdminHomePage.html">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" id="navbar2" aria-current="page" href="#">Profile</a>
+                <a class="nav-link active" id="navbar2" aria-current="page" href="Admin_Edit_Vendor_Profile1.html">Profile</a>
             </li>
           <li class="nav-item">
-              <a class="nav-link active" id="navbar2" aria-current="page" href="#">Booking</a>
+              <a class="nav-link active" id="navbar2" aria-current="page" href="Booking_table_For_Admin.html">Booking</a>
           </li>
           <li class="nav-item">
-              <a class="nav-link active" id="navbar2" aria-current="page" href="#">Completed Work</a>
+              <a class="nav-link active" id="navbar2" aria-current="page" href="Completed_Work_Table_For_Admin.html">Completed Work</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" id="navbar2" aria-current="page" href="#">Histroy</a>
+            <a class="nav-link active" id="navbar2" aria-current="page" href="History_Table_For_Admin.html">Histroy</a>
           </li>
           
         </ul>
@@ -226,51 +226,44 @@
                     </div><br>
                     <div class="form-row" >
                         <div class="form-group col-md-10 ms-5">
-                            <input type="text" class="form-control form-control-sm" value="Name" readonly>
+                            <input type="text" class="form-control form-control-sm" value="Name" >
                         </div><br>
                         <div class="form-group col-md-10 ms-5" >
-                            <input type="text" class="form-control form-control-sm" value="Father Name" readonly>
+                            <input type="text" class="form-control form-control-sm" value="Father Name" >
                         </div><br>
                         <div class="form-group col-md-10 ms-5">
-                            <input type="text" class="form-control form-control-sm" value="Email" readonly>
+                            <input type="text" class="form-control form-control-sm" value="Email" >
                         </div><br>
                         <div class="form-group col-md-10 ms-5">
-                            <input type="text" class="form-control form-control-sm" value="Password" readonly>
+                            <input type="text" class="form-control form-control-sm" value="Password" >
                         </div><br>
                         <div class="form-group col-md-10 ms-5">
-                            <input type="text" class="form-control form-control-sm" value="Address" readonly>
+                            <input type="text" class="form-control form-control-sm" value="Address" >
                         </div><br>
                         <div class="form-group col-md-10 ms-5">
-                            <input type="text" class="form-control form-control-sm" value="Adhar Number" readonly>
+                            <input type="text" class="form-control form-control-sm" value="Adhar Number" >
                         </div>
                     </div>
                 </div>
-            </div>      
-   
+            </div>     
+            
+            
+            <div class="alert alert-success alert-dismissible fade show" role="alert" id="show" style="display: none;">
+              <strong>Vendor</strong> has been blocked Seccusful
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <div class="alert alert-success alert-dismissible fade show" role="alert" id="show1" style="display: none;">
+              <strong>Vendor</strong> has been Removed Seccusful
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
     <div class="text-center">
       <!--<a href="EditJobs.html" class="btn btn-sm bg-success text-white">Edit</a>-->
-      <button id="btn1" class="btn btn-warning mt-4 me-5 shadow-lg" >Update Profile</button>
-      <button id="btn1" class="btn btn-warning mt-4 me-5 shadow-lg" >Block</button>
-      <button id="btn1" class="btn btn-warning mt-4 me-5 shadow-lg">Delete</button>
+      <button id="btn1" class="btn btn-warning mt-4 me-5 shadow-lg" > <a href="Admin_Edit_Vendor_Profile1.html" style="font-weight: bold;">Update Profile</a></button>
+      <button id="btn1" class="btn btn-warning mt-4 me-5 shadow-lg"  onclick="block()">Block</button>
+      <button id="btn1" class="btn btn-warning mt-4 me-5 shadow-lg" onclick="block1()">Delete</button>
   </div>
 </div>
-  <div class="container mt-5">
-    <h2>
-      WHY HOME SERVICE PROVIDER?</h2> <br>
-      
-      <div class="row row-cols-lg-5 row-cols-md-2 row-cols-sm-2 row-cols-1 ms-5">
-        
-        <div class="col"><img id="img1" class="img-fluid ms-1 " src="https://d27vg8jo26ejl7.cloudfront.net/images/why_joboy/On-Demand-Scheduled.webp" alt=""><p class="p-1 mt-2">ON DEMAND /
-          SCHEDULED</p></div>
-        <div class="col"><img id="img1" class="img-fluid ms-4 "  src="https://d27vg8jo26ejl7.cloudfront.net/images/why_joboy/Verified-Partners.webp" alt=""><p class="p-1 mt-2">VERIFIED PARTNERS</p></div>
-        <div class="col"><img id="img1" class="img-fluid ms-4 "  src="https://d27vg8jo26ejl7.cloudfront.net/images/why_joboy/Service-Warranty.webp" alt=""><p class="p-1 mt-2">SERVICE WARRANTY</p></div>
-        <div class="col"><img id="img1" class="img-fluid ms-4 "  src="https://d27vg8jo26ejl7.cloudfront.net/images/why_joboy/Transparent-Pricing.webp" alt=""><p class="p-1 mt-2">TRANSPARENT PRICING</p></div>
-        <div class="col"><img id="img1" class="img-fluid ms-4 "  src="https://d27vg8jo26ejl7.cloudfront.net/images/why_joboy/Online-Payments.webp" alt=""><p class="p-1 mt-2">ONLINE PAYMENTS</p></div>
-    
-    
-      </div>
   
-  </div>
   <!-- Footer -->
   <footer class="text-center text-lg-start bg-light text-muted">
     <!-- Section: Social media -->
@@ -395,4 +388,15 @@
   
   </body>
   </html>
-
+<script>
+  function block()
+  { 
+    var show = document.getElementById("show");
+    show.style.display="block"
+  }
+  function block1()
+  { 
+    var show1 = document.getElementById("show1");
+    show1.style.display="block"
+  }
+</script>
