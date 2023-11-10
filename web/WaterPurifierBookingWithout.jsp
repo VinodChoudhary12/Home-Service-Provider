@@ -148,7 +148,11 @@
             <div class="col">
                 <h3 style="font-weight: bold; margin-top: 20px; margin-left: 15px;">WATER-PURIFIER</h3>
                  <span style="float: right; margin-top: -35px; margin-right: 150px;"><img src="https://joboy.in/assets/images/share.png" alt=""> Share</span>
+<<<<<<< HEAD:web/WaterPurifierBookingWithout.html
+                 <button class="btn btn-warning ms-5" style="border-radius: 10px; font-weight: bold; float: right; margin-top: -40px; margin-right: 13px;"><a style="text-decoration: none; color: black;" href="LoginUser.html">BOOK NOW</a></button>
+=======
                  <button class="btn btn-warning ms-5" style="border-radius: 10px; font-weight: bold; float: right; margin-top: -40px; margin-right: 13px;"><a style="text-decoration: none; color: black;" href="dateproject.jsp">BOOK NOW</a></button>
+>>>>>>> 7f312f52e2a1e344b99a77ad86eef884954a408f:web/WaterPurifierBookingWithout.jsp
                 <span>-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------</span>
                 <span style="margin-top: 20px; margin-left: 380px; font-size: 17px;"><img src="https://joboy.in/assets/images/offer-badge.png" alt=""> &nbsp;&nbsp;Pay online & get upto 50%off</span>   
             </div>
