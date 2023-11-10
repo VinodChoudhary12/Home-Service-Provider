@@ -22,7 +22,7 @@
                 <div class="form-content">
                     <div class="login-form">
                         <div class="title">Vendor Login</div>
-                        <form action="VendorHomePage.html">
+                        <form action="VendorHomePage.jsp">
                             <div class="input-boxes">
                                 <div class="input-box">
                                     <i class="fas fa-envelope"></i>
