@@ -194,7 +194,9 @@ float: right;
    
       <div class="container  shadow-lg" id="pro" style="margin-top:20px;">
           <div class="logo" style="margin-top:50px;">
-              <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.SxuyKL-Ca-_bXp1TC4c4-gHaF3%26pid%3DApi&f=1&ipt=d3f657ab738716ba3fcab04b050a8a6ced3da0a5a691cc703fe4605f23339990&ipo=images" width="40%" height="100px" style="margin-left: 80px;"  alt="">
+              <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.SxuyKL-Ca-_bXp1TC4c4-gHaF3%26pid%3DApi&f=1&ipt=d3f657ab738716ba3fcab04b050a8a6ced3da0a5a691cc703fe4605f23339990&ipo=images" width="40%" height="100px" style="margin-left: 80px;"  alt="" >
+              <input type="file">
+              
           </div><br>
           <div class="form-row " >
               <div class="form-group col-md-10 ms-3 ">
@@ -545,7 +547,7 @@ float: right;
 
   <!-- Copyright -->
   <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-    � 2021 Copyright:
+    &copy; 2021 Copyright:
       </div>
   <!-- Copyright -->
 </footer>

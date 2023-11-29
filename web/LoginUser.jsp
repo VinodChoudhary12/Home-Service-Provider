@@ -22,7 +22,7 @@
                 <div class="form-content">
                     <div class="login-form">
                         <div class="title">Login</div>
-                        <form action="Electrician_Booking_Page.jsp">
+                        <form action="UserHomePageLogin.jsp">
                             <div class="input-boxes">
                                 <div class="input-box">
                                     <i class="fas fa-envelope"></i>
@@ -34,7 +34,7 @@
                                 </div>
                                 <div class="text"><a href="#">Forgot password?</a></div>
                                 <div class="button input-box">
-                                    <input type="submit" value="Sumbit">
+                                    <input type="submit" value="login">
                                 </div>
                                 <div class="text sign-up-text">
                                     Don't have an account? <a href="RegistrationUser.jsp"><label>Sigup now</label></a>

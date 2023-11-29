@@ -71,9 +71,10 @@
    <h2 style="margin-top: 40px; color: #FFC107;"> My All Bookings </h2>
 
 <div class="container mt-5">
+<div class="table-responsive">
 
 
-<table class="table w-100 table table-hover table-bordered border" align="center" >
+<table class="table w-100 table table-hover table-bordered border responsive" align="center" >
   <thead>
     <tr>
       <th scope="col">Order Number</th>
@@ -82,6 +83,8 @@
       <th scope="col">Date</th>
       <th scope="col">Time-slot</th>
       <th scope="col">Address</th>
+      <th scope="col">Process</th>
+      
     </tr>
   </thead>
   <tbody>
@@ -92,6 +95,7 @@
       <td>03/11/2023</td>
       <td>2:00PM - 4:00PM</td>
       <td>Vijay Shree Nagar</td>
+      <td><a href="#" class="btn btn-warning sm" >Process</a></td>
       
      
       
@@ -126,6 +130,7 @@
   </tbody>
 </table>
 </div>
+    </div>
 
 
 

@@ -200,31 +200,31 @@
               <table class="table table-bordered text-center table-hover">
                 <tr>
                   <th scope="row">First 1 Hr</th>
-                  <td>₹ 329</td> 
+                  <td> &#x20B9; 329</td> 
                 </tr>
                 <tr>
                   <th scope="row">Upto 1.5 Hrs</th>
-                  <td>₹ 449</td>
+                  <td>&#x20B9; 449</td>
                 </tr>
                 <tr>
                   <th scope="row">Upto 2 Hrs</th>
-                  <td>₹ 529</td> 
+                  <td>&#x20B9; 529</td> 
                 </tr>
                 <tr>
                   <th scope="row">Upto 2.5 Hrs</th>
-                  <td>₹ 649</td>
+                  <td>&#x20B9; 649</td>
                 </tr>
                 <tr>
                   <th scope="row">Upto 3 Hrs</th>
-                  <td>₹ 729</td> 
+                  <td>&#x20B9; 729</td> 
                 </tr>
                 <tr>
                   <th scope="row">Upto 3.5 Hrs</th>
-                  <td>₹ 849</td>
+                  <td>&#x20B9; 849</td>
                 </tr>
                 <tr>
                   <th scope="row">Upto 4 Hrs</th>
-                  <td>₹ 929</td>
+                  <td>&#x20B9; 929</td>
                 </tr>
               </table>
             </div>

@@ -445,7 +445,7 @@ function validateForm() {
                 
                 <input onclick="validateForm()" id="button" type="submit" name="submit" value="Register">
                 <div class="register">
-                    <p>You already have an account? <a href="Demo">Login</a></p>
+                    <p>You already have an account? <a href="LoginUser.jsp">Login</a></p>
                 </div>
             </form>
         </div>
