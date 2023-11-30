@@ -55,10 +55,10 @@ public class UserRegistration1 extends HttpServlet {
         boolean registrationSuccessful = dto.insert(udao);
 
         if (registrationSuccessful) {
-            response.sendRedirect("LoginUser.jsp");
+            response.sendRedirect("./User/LoginUser.jsp");
         } else {
             // Redirect to a registration error page
-            response.sendRedirect("RegistrationUser.jsp");
+            response.sendRedirect("/RegistrationUser.jsp");
         }  
     } catch (Exception e) {
         // Log the exception for debugging

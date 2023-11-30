@@ -52,10 +52,10 @@ public class UserLogin1 extends HttpServlet {
                 session.setAttribute("password",udao.getPassword());
                 session.setAttribute("image",udao.getImage());
                 session.setAttribute("userid", udao.getUserid());
-              response.sendRedirect("UserHomePageLogin.jsp");
+              response.sendRedirect("/UserHomePageLogin.jsp");
             }
             else{
-            response.sendRedirect("LoginUser.jsp");
+            response.sendRedirect("/LoginUser.jsp");
               
             }
             
