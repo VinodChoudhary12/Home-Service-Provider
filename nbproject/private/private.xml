@@ -5,21 +5,28 @@
         <group>
             <file>file:/D:/HomeServiceProvider2/HomeServiceProvider2/web/Services/ACRepairWhithoutBooking.jsp</file>
             <file>file:/D:/HomeServiceProvider2/HomeServiceProvider2/web/Services/PainterBookingWithout.jsp</file>
-            <file>file:/D:/HomeServiceProvider2/HomeServiceProvider2/web/Admin/AdminPendingWork.jsp</file>
-            <file>file:/D:/HomeServiceProvider2/HomeServiceProvider2/web/User/MyOrder.jsp</file>
-            <file>file:/D:/HomeServiceProvider2/HomeServiceProvider2/web/Services/Ac_Repair_Booking_Page.jsp</file>
-            <file>file:/D:/HomeServiceProvider2/HomeServiceProvider2/web/Admin/style.css</file>
-            <file>file:/D:/HomeServiceProvider2/HomeServiceProvider2/web/User/UserHomePageLogin.jsp</file>
-            <file>file:/D:/HomeServiceProvider2/HomeServiceProvider2/web/LoginVendor.jsp</file>
-            <file>file:/D:/HomeServiceProvider2/HomeServiceProvider2/web/MainAdmin/Admin/Admin/assets/vendor/bootstrap-icons/bootstrap-icons.css</file>
-            <file>file:/D:/HomeServiceProvider2/HomeServiceProvider2/web/User/AOrder.jsp</file>
-            <file>file:/D:/HomeServiceProvider2/HomeServiceProvider2/web/User/UserHomePage.jsp</file>
-            <file>file:/D:/HomeServiceProvider2/HomeServiceProvider2/web/Admin/Admin_Edit_Vendor_Profile1.jsp</file>
-            <file>jar:file:/D:/HomeServiceProvider2/HomeServiceProvider2/web/MainAdmin.zip!/Admin/Admin/users-profile.html</file>
+            <file>file:/D:/HomeServiceProvider2/HomeServiceProvider2/web/Vender/LoginVendor.jsp</file>
+            <file>file:/D:/HomeServiceProvider2/HomeServiceProvider2/web/Vender/VendorHomePage.css</file>
             <file>file:/D:/HomeServiceProvider2/HomeServiceProvider2/web/Admin/AdminHomePage.jsp</file>
-            <file>file:/D:/HomeServiceProvider2/HomeServiceProvider2/web/CompletedWork.jsp</file>
+            <file>file:/D:/HomeServiceProvider2/HomeServiceProvider2/web/progreass.js</file>
+            <file>file:/D:/HomeServiceProvider2/HomeServiceProvider2/web/json.html</file>
+            <file>file:/D:/HomeServiceProvider2/HomeServiceProvider2/web/Vender/CompletedWork.jsp</file>
+            <file>file:/D:/HomeServiceProvider2/HomeServiceProvider2/web/User/MyOrder.jsp</file>
+            <file>file:/D:/HomeServiceProvider2/HomeServiceProvider2/web/Admin/Admin_Edit_Vendor_Profile1.jsp</file>
+            <file>file:/D:/HomeServiceProvider2/HomeServiceProvider2/web/Admin/style.css</file>
+            <file>file:/D:/HomeServiceProvider2/HomeServiceProvider2/web/Services/Ac_Repair_Booking_Page.jsp</file>
+            <file>file:/D:/HomeServiceProvider2/HomeServiceProvider2/web/Vender/VendorHomePage.jsp</file>
+            <file>file:/D:/HomeServiceProvider2/HomeServiceProvider2/web/User/UserHomePage.jsp</file>
+            <file>file:/D:/HomeServiceProvider2/HomeServiceProvider2/web/Vender/Vendor_profile_page.jsp</file>
+            <file>file:/D:/HomeServiceProvider2/HomeServiceProvider2/web/User/AOrder.jsp</file>
             <file>file:/D:/HomeServiceProvider2/HomeServiceProvider2/web/style.css</file>
-            <file>file:/D:/HomeServiceProvider2/HomeServiceProvider2/web/VendorHomePage.jsp</file>
+            <file>file:/D:/HomeServiceProvider2/HomeServiceProvider2/web/Admin/AdminPendingWork.jsp</file>
+            <file>jar:file:/D:/HomeServiceProvider2/HomeServiceProvider2/web/MainAdmin.zip!/Admin/Admin/users-profile.html</file>
+            <file>file:/D:/HomeServiceProvider2/HomeServiceProvider2/web/User/UserHomePageLogin.jsp</file>
+            <file>file:/D:/HomeServiceProvider2/HomeServiceProvider2/web/MainAdmin/Admin/Admin/assets/vendor/bootstrap-icons/bootstrap-icons.css</file>
+            <file>file:/D:/HomeServiceProvider2/HomeServiceProvider2/web/index.html</file>
+            <file>file:/D:/HomeServiceProvider2/HomeServiceProvider2/web/managevenderproject.jsp</file>
+            <file>file:/D:/HomeServiceProvider2/HomeServiceProvider2/web/Image/Admin2.jpg</file>
             <file>file:/D:/HomeServiceProvider2/HomeServiceProvider2/web/User/RegistrationUser.jsp</file>
         </group>
     </open-files>
