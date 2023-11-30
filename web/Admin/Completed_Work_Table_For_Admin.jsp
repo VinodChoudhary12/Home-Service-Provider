@@ -43,7 +43,7 @@
   <body>
     <header id="header" class="header fixed-top d-flex align-items-center">
       <div class="d-flex align-items-center justify-content-between">
-        <a href="index.jsp" class="logo d-flex align-items-center">
+          <a href="AdminHomePage.jsp.jsp" class="logo d-flex align-items-center">
           <span style="color: #FFC107;" class="d-none d-lg-block">Admin Dashboard</span>
         </a>
         <i class="bi bi-list toggle-sidebar-btn"></i>
@@ -64,7 +64,7 @@
             class="nav-link collapsed"
             data-bs-target="#tables-nav"
           
-            href="#"
+            href="AdminHomePage.jsp"
           >
             <i class="fa-solid fa-home"></i><span>Home</span
             ><i class="bi bi-chevron-down ms-auto"></i>

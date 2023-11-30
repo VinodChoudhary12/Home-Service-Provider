@@ -93,7 +93,7 @@
             class="nav-link collapsed"
             data-bs-target="#tables-nav"
           
-            href="#"
+            href="AdminHomePage.jsp"
           >
             <i class="fa-solid fa-home"></i><span>Home</span
             ><i class="bi bi-chevron-down ms-auto"></i>
