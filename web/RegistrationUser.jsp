@@ -400,7 +400,7 @@ function validateForm() {
     </head>
     <body>
         <div class="wrapper">
-            <form onsubmit="return validateForm()" action="text">
+            <form onsubmit="return validateForm()" action="UserRegistration1">
                 <h2>Registration</h2>
                 <div class="input-field">
                     <input onkeyup="validateName()" id="name" type="text"  name="name" >

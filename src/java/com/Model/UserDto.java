@@ -26,7 +26,7 @@ public class UserDto {
         boolean b = false;
         Connection con = Get_Conection.getConnection();
 
-        String sql = "INSERT INTO user_Detail (name ,contact ,email,address ,city ,password,image) VALUES(?, ?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO user_Detail (name ,contact ,email,address ,city ,password) VALUES( ?, ?, ?, ?, ?, ?)";
         
         try
         {
@@ -38,7 +38,7 @@ public class UserDto {
             ps.setString(4, udao.getAddress());
             ps.setString(5, udao.getCity());
             ps.setString(6, encrypt);
-            ps.setString(7, udao.getImage());
+            //ps.setString(7, udao.getImage());
            
             int i = ps.executeUpdate();
             if (i > 0) {
@@ -53,7 +53,7 @@ public class UserDto {
 
     public boolean login(UserDao udao) {
         boolean b = false;
-        String sql = "SELECT * FROM Useuser_Detail WHERE Email=? ";
+        String sql = "SELECT * FROM user_Detail WHERE email=? ";
        
         
         try (Connection con = Get_Conection.getConnection();
@@ -66,21 +66,21 @@ public class UserDto {
             
             try (ResultSet rs = ps.executeQuery()) {
                 if (rs.next()) {
-                        String encrypt=rs.getString("Password");
+                        String encrypt=rs.getString("password");
                         String decrypt=decrypt(encrypt);
                         
                         System.out.println(""+decrypt);
                         if(decrypt.equals(udao.getPassword()))
                         {
-                        udao.setName(rs.getString("name"));
-                        udao.setContact(rs.getString("contact"));
-                        udao.setEmail(rs.getString("email"));
-                        udao.setAddress(rs.getString("address"));
-                        udao.setCity(rs.getString("city"));
-                        udao.setPassword(rs.getString("password"));
-                        udao.setImage(rs.getString("image"));
-                        udao.setUserid(rs.getInt("userid"));
-                         b = true;
+                            udao.setName(rs.getString("name"));
+                            udao.setContact(rs.getString("contact"));
+                            udao.setEmail(rs.getString("email"));
+                            udao.setAddress(rs.getString("address"));
+                            udao.setCity(rs.getString("city"));
+                            udao.setPassword(rs.getString("password"));
+                            //udao.setImage(rs.getString("image"));
+                            udao.setUserid(rs.getInt("userid"));
+                             b = true;
                         }
                            
                 }

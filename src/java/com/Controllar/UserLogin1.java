@@ -12,12 +12,13 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 /**
  *
  * @author Admin
  */
-public class UserRegistration extends HttpServlet {
+public class UserLogin1 extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -32,35 +33,32 @@ public class UserRegistration extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-       
-            String name = request.getParameter("name");
-            String email = request.getParameter("email");
-            String address = request.getParameter("address");
-            String city = request.getParameter("city");
-            String contact = request.getParameter("contact");
-            String pass = request.getParameter("pass");
-            String cpass = request.getParameter("cpass");
+            String email=request.getParameter("email");
+            String pass=request.getParameter("password");
+             
+             UserDao udao =new UserDao();
+             udao.setEmail(email);
+             udao.setPassword(pass);
+  
+            UserDto udto =new UserDto();
+            boolean b=udto.login(udao);
+            if(b){
+                HttpSession session=request.getSession();
+                session.setAttribute("name",udao.getName());
+                session.setAttribute("email",udao.getEmail());
+                session.setAttribute("address",udao.getAddress());
+                session.setAttribute("city",udao.getCity());
+                session.setAttribute("contact",udao.getContact());
+                session.setAttribute("password",udao.getPassword());
+                session.setAttribute("image",udao.getImage());
+                session.setAttribute("userid", udao.getUserid());
+              response.sendRedirect("UserHomePageLogin.jsp");
+            }
+            else{
+            response.sendRedirect("LoginUser.jsp");
+              
+            }
             
-            
-            UserDao udao = new UserDao();
-            udao.setName(name);
-            udao.setEmail(email);
-            udao.setAddress(address);
-            udao.setCity(city);
-            udao.setContact(contact);
-            udao.setPassword(pass);
-         
-            
-            UserDto dto = new UserDto();
-            boolean b = dto.insert(udao);
-//             out.print(daoc.getFname());
-            if (b) {
-                        response.sendRedirect("LoginUser.jsp");
-               
-            } else {
-                // Redirect to a registration error page
-               response.sendRedirect("RegistrationUser.jsp");
-            }  
         }
     }
 
