@@ -4,8 +4,24 @@
         <servlet-name>Test</servlet-name>
         <servlet-class>Test.Test</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>text</servlet-name>
+        <servlet-class>com.Controllar.text</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UserLogin</servlet-name>
+        <servlet-class>com.Controllar.UserLogin</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Test</servlet-name>
         <url-pattern>/Test</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>text</servlet-name>
+        <url-pattern>/text</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UserLogin</servlet-name>
+        <url-pattern>/UserLogin</url-pattern>
     </servlet-mapping>
 </web-app>
