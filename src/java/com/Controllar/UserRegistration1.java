@@ -17,7 +17,7 @@ import jakarta.servlet.http.HttpServletResponse;
  *
  * @author Admin
  */
-public class UserRegistration extends HttpServlet {
+public class UserRegistration1 extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -29,40 +29,44 @@ public class UserRegistration extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-       
-            String name = request.getParameter("name");
-            String email = request.getParameter("email");
-            String address = request.getParameter("address");
-            String city = request.getParameter("city");
-            String contact = request.getParameter("contact");
-            String pass = request.getParameter("pass");
-            String cpass = request.getParameter("cpass");
-            
-            
-            UserDao udao = new UserDao();
-            udao.setName(name);
-            udao.setEmail(email);
-            udao.setAddress(address);
-            udao.setCity(city);
-            udao.setContact(contact);
-            udao.setPassword(pass);
-         
-            
-            UserDto dto = new UserDto();
-            boolean b = dto.insert(udao);
-//             out.print(daoc.getFname());
-            if (b) {
-                        response.sendRedirect("LoginUser.jsp");
-               
-            } else {
-                // Redirect to a registration error page
-               response.sendRedirect("RegistrationUser.jsp");
-            }  
-        }
+        throws ServletException, IOException {
+    response.setContentType("text/html;charset=UTF-8");
+    
+    try (PrintWriter out = response.getWriter()) {
+        String name = request.getParameter("name");
+        String email = request.getParameter("email");
+        String address = request.getParameter("address");
+        String city = request.getParameter("city");
+        String contact = request.getParameter("contact");
+        String pass = request.getParameter("pass");
+        String cpass = request.getParameter("cpass");
+
+        // Perform data validation, password matching, etc.
+
+        UserDao udao = new UserDao();
+        udao.setName(name);
+        udao.setEmail(email);
+        udao.setAddress(address);
+        udao.setCity(city);
+        udao.setContact(contact);
+        udao.setPassword(pass);
+
+        UserDto dto = new UserDto();
+        boolean registrationSuccessful = dto.insert(udao);
+
+        if (registrationSuccessful) {
+            response.sendRedirect("./User/LoginUser.jsp");
+        } else {
+            // Redirect to a registration error page
+            response.sendRedirect("/RegistrationUser.jsp");
+        }  
+    } catch (Exception e) {
+        // Log the exception for debugging
+        e.printStackTrace();
+        // Redirect to an error page
+        response.sendRedirect("ErrorPage.jsp");
     }
+}
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**

@@ -4,7 +4,6 @@
  */
 package com.Controllar;
 
-
 import com.Model.UserDao;
 import com.Model.UserDto;
 import java.io.IOException;
@@ -19,7 +18,7 @@ import jakarta.servlet.http.HttpSession;
  *
  * @author Admin
  */
-public class UserLogin extends HttpServlet {
+public class UserLogin1 extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -35,7 +34,7 @@ public class UserLogin extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             String email=request.getParameter("email");
-             String pass=request.getParameter("password");
+            String pass=request.getParameter("password");
              
              UserDao udao =new UserDao();
              udao.setEmail(email);
@@ -44,19 +43,19 @@ public class UserLogin extends HttpServlet {
             UserDto udto =new UserDto();
             boolean b=udto.login(udao);
             if(b){
-            HttpSession session=request.getSession();
-            session.setAttribute("name",udao.getName());
-            session.setAttribute("email",udao.getEmail());
-            session.setAttribute("address",udao.getAddress());
-            session.setAttribute("city",udao.getCity());
-            session.setAttribute("contact",udao.getContact());
-            session.setAttribute("password",udao.getPassword());
-            session.setAttribute("image",udao.getImage());
-            session.setAttribute("userid", udao.getUserid());
-              response.sendRedirect("UserDashBoard.jsp");
+                HttpSession session=request.getSession();
+                session.setAttribute("name",udao.getName());
+                session.setAttribute("email",udao.getEmail());
+                session.setAttribute("address",udao.getAddress());
+                session.setAttribute("city",udao.getCity());
+                session.setAttribute("contact",udao.getContact());
+                session.setAttribute("password",udao.getPassword());
+                session.setAttribute("image",udao.getImage());
+                session.setAttribute("userid", udao.getUserid());
+              response.sendRedirect("/UserHomePageLogin.jsp");
             }
             else{
-            response.sendRedirect("UserLogin.jsp");
+            response.sendRedirect("/LoginUser.jsp");
               
             }
             
