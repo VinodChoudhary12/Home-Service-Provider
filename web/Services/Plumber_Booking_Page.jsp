@@ -130,9 +130,9 @@
             <a class="nav-link active" id="navbar2" aria-current="page" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
           </li>-->
         </ul>
-        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Toggle right offcanvas</button>
+<!--        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Toggle right offcanvas</button>-->
 
-<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+<!--<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
   <div class="offcanvas-header">
     <h5 id="offcanvasRightLabel">Offcanvas right</h5>
     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -140,7 +140,7 @@
   <div class="offcanvas-body">
     ...
   </div>
-</div>
+</div>-->
         <form class="d-flex">
           <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
           <button type="button" class="btn btn-warning me-5" style="border-radius: 13px; font-weight: bold;">

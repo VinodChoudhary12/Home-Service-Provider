@@ -15,8 +15,6 @@
 #navbar1{
     margin-left: 120px;
     border: 1px solid black ;
-   
-    
   }
   #navbar2{
     margin-left: 30px;
@@ -25,12 +23,9 @@
        list-style: none;
   }
   #navbar12{
-  
-   
+
     width: 100%;
-    margin-left: 2px;
-   
-    
+    margin-left: 2px; 
   }
   #con1{
    
@@ -44,9 +39,6 @@
     border: 1px solid gainsboro;
     border-radius: 10px ;
     background-color: rgb(249,249,249);
-   
-    
-
   }
   #span1{
     height: 34px;
@@ -96,7 +88,7 @@
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
           <button type="button" class="btn btn-warning me-5" style="border-radius: 13px; font-weight: bold;">
             <li  id= "li1" class="nav-item dropdown">
-                <a id="" class="nav-link text-dark "   href="LoginUser.jsp" >
+                <a id="" class="nav-link text-dark "   href="../User/LoginUser.jsp" >
                Login
               </a>
              
@@ -148,16 +140,14 @@
             <div class="col">
                 <h3 style="font-weight: bold; margin-top: 20px; margin-left: 15px;">AC-REPAIR</h3>
                  <span style="float: right; margin-top: -35px; margin-right: 150px;"><img src="https://joboy.in/assets/images/share.png" alt=""> Share</span>
-<<<<<<< HEAD:web/ACRepairWhithoutBooking.html
-                 <button class="btn btn-warning ms-5" style="border-radius: 10px; font-weight: bold; float: right; margin-top: -40px; margin-right: 13px;"><a style="text-decoration: none; color: black;" href="LoginUser.html">BOOK NOW</a></button>
-=======
-                 <button class="btn btn-warning ms-5" style="border-radius: 10px; font-weight: bold; float: right; margin-top: -40px; margin-right: 13px;"><a style="text-decoration: none; color: black;" href="dateproject.jsp">BOOK NOW</a></button>
->>>>>>> 7f312f52e2a1e344b99a77ad86eef884954a408f:web/ACRepairWhithoutBooking.jsp
+                 <!--<button name="AcRepair" class="btn btn-warning ms-5" style="border-radius: 10px; font-weight: bold; float: right; margin-top: -40px; margin-right: 13px;"><a style="text-decoration: none; color: black;" href="../User/LoginUser.jsp">BOOK NOW</a></button>-->
+                 <form action="../User/LoginUser.jsp" >
+                     <button type="submit" name="name" value="AcRepair" class="btn btn-warning ms-5" style="border-radius: 10px; font-weight: bold; float: right; margin-top: -40px; margin-right: 13px;">BOOK NOW</button>
+                 </form>
                 <span>-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------</span>
                 <span style="margin-top: 20px; margin-left: 380px; font-size: 17px;"><img src="https://joboy.in/assets/images/offer-badge.png" alt=""> &nbsp;&nbsp;Pay online & get upto 50%off</span>   
             </div>
      </div>
-      
     </div>
     <div  class="container">
       <div class="row row-cols-lg-1 row-cols-1  ">
@@ -345,9 +335,7 @@
                 <a href="#!" class="text-reset">FAQ</a>
               </p>
             </div>
-            <!-- Grid column -->
-    
-            <!-- Grid column -->
+        
             <div id="Contact_US" class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
               <!-- Links -->
               <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
@@ -409,5 +397,5 @@
           <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"crossorigin="anonymous"></script>
           <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
       
-      </body>
-      </html>
+    </body>
+</html>

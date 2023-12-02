@@ -12,12 +12,9 @@
     <link rel="stylesheet" href="Pest.css">
 </head>
 <style> 
-       
 #navbar1{
     margin-left: 120px;
-    border: 1px solid black ;
-   
-    
+    border: 1px solid black;
   }
   #navbar2{
     margin-left: 30px;
@@ -45,9 +42,6 @@
     border: 1px solid gainsboro;
     border-radius: 10px ;
     background-color: rgb(249,249,249);
-   
-    
-
   }
   #span1{
     height: 34px;
@@ -99,17 +93,16 @@
                 <li  id= "li1" class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle text-dark ms-2 "   href="LoginUser.jsp" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       Login
-                  </a>
-                  
-                </li>
-              </button> -->
-              <button class="btn btn-warning ms-5" style="border-radius: 10px;height: 49px; font-weight: bold;  margin-right: 13px;"><a style="text-decoration: none; color: black;" href="LoginUser.jsp">Login</a></button>
-    <!--          <li class="nav-item">
-                <a href=""class="nav-link active" id="navbar1" aria-current="page" href="#"><i class="fa-solid fa-magnifying-glass" style="color: #050505;"></i></a>
-    
-                
-              </li>-->
-                
+                  </a></li></button> -->
+             <button type="button" class="btn btn-warning me-5" style="border-radius: 13px; font-weight: bold;">
+                  <li  id= "li1" class="nav-item dropdown">
+                <a id="" class="nav-link text-dark "   href="../User/LoginUser.jsp" >
+               Login
+              </a>
+             
+            </li>
+          </button>
+
               <li class="nav-item">
                 <a class="nav-link active" id="navbar2" aria-current="page" href="">HOME</a>
               </li>
@@ -150,10 +143,16 @@
             <div class="col">
                 <h3 style="font-weight: bold; margin-top: 20px; margin-left: 15px;">ELECTRICIAN</h3>
                  <span style="float: right; margin-top: -35px; margin-right: 150px;"><img src="https://joboy.in/assets/images/share.png" alt=""> Share</span>
-                 <button class="btn btn-warning ms-5" style="border-radius: 10px; font-weight: bold; float: right; margin-top: -40px; margin-right: 13px;"><a style="text-decoration: none; color: black;" href="LoginUser.jsp">BOOK NOW</a></button>
+              <!--<a style="text-decoration: none; color: black;" href="../User/LoginUser.jsp"><input value="BOOK NOW" name="Electition" class="btn btn-warning ms-5" style="border-radius: 10px; font-weight: bold; float: right; margin-top: -40px; margin-right: 13px;"></a>-->
+              <form action="../User/LoginUser.jsp" >  
+                  <button type="submit" name="name" value="Electition" class="btn btn-warning ms-5" style="border-radius: 10px; font-weight: bold; float: right; margin-top: -40px; margin-right: 13px;">BOOK NOW</button>
+              </form>
+              <!--<a style="text-decoration: none; color: black;" href="../User/LoginUser.jsp"><input value="BOOK NOW" value="Electition" class="btn btn-warning ms-5" style="border-radius: 10px; font-weight: bold; float: right; margin-top: -40px; margin-right: 13px;"></a>-->
+                     
                 <span>-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------</span>
                 <span style="margin-top: 20px; margin-left: 380px; font-size: 17px;"><img src="https://joboy.in/assets/images/offer-badge.png" alt=""> &nbsp;&nbsp;Pay online & get upto 50%off</span>   
             </div>
+        </div>
      </div>
       
     </div>

@@ -400,17 +400,12 @@ function validateForm() {
     </head>
     <body>
         <div class="wrapper">
-            <form onsubmit="return validateForm()" action="UserRegistration1">
+            <form onsubmit="return validateForm()" action="../UserRegistration1">
                 <h2>Registration</h2>
                 <div class="input-field">
                     <input onkeyup="validateName()" id="name" type="text"  name="name" >
                     <label>Enter your Name</label>
                     <label id="dname"> </label>
-                </div>
-                <div class="input-field">
-                    <input onkeyup="validateFName()" id="fname" type="text"  name="fname" >
-                    <label>Enter Father Name</label>
-                    <label id="dfname"> </label>
                 </div>
                 <div class="input-field">
                     <input onkeyup="validateEmail()" id="email" type="text" name="email" >

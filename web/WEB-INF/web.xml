@@ -24,6 +24,14 @@
         <servlet-name>UserLogin1</servlet-name>
         <servlet-class>com.Controllar.UserLogin1</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>UserUpdate</servlet-name>
+        <servlet-class>com.Controllar.UserUpdate</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LoginElectition</servlet-name>
+        <servlet-class>com.Controllar.LoginElectition</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Test</servlet-name>
         <url-pattern>/Test</url-pattern>
@@ -47,5 +55,13 @@
     <servlet-mapping>
         <servlet-name>UserLogin1</servlet-name>
         <url-pattern>/UserLogin1</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UserUpdate</servlet-name>
+        <url-pattern>/UserUpdate</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LoginElectition</servlet-name>
+        <url-pattern>/LoginElectition</url-pattern>
     </servlet-mapping>
 </web-app>

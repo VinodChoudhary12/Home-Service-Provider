@@ -98,6 +98,92 @@ public class UserDto {
         return false;
     }
     
+    public boolean update(UserDao dao) {
+        boolean b = false;
+        
+        Connection con=Get_Conection.getConnection();
+        String sql= "update user_detail set name = ? , address=?, contact=? where email = ? ";
+        try {
+            
+            PreparedStatement ps = con.prepareStatement(sql);
+            
+            ps.setString(1, dao.getName());
+            ps.setString(2, dao.getAddress());
+            ps.setString(3, dao.getContact());
+            ps.setString(4, dao.getEmail());
+           
+            int i = ps.executeUpdate();
+            if (i > 0){
+                   String sql1 = "select * from user_detail where email=?";
+                   
+                     ps = con.prepareStatement(sql1);
+                    
+                    ps.setString(1,dao.getEmail());
+                    ResultSet rs= ps.executeQuery();
+                    if (rs.next()) 
+                    {
+                        
+                       
+                        String encrypt=rs.getString("Password");
+                        String decrypt=decrypt(encrypt);
+                     
+                        if(decrypt.equals(dao.getPassword()))
+                        {
+                           
+                            dao.setName(rs.getString("name"));
+                            dao.setContact(rs.getString("contact"));
+                            dao.setEmail(rs.getString("email"));
+                            dao.setPassword(decrypt);
+                            dao.setAddress(rs.getString("address"));
+                            
+                                                   
+                        }
+                    }        b = true; 
+                }
+            } catch (SQLException e) {
+                System.out.println(""+e);
+        }
+            return b;
+    }
+    
+     public boolean session(UserDao udao) throws SQLException {
+         boolean b=false;
+     String sql = "select * from user_detail where email=?";
+               try (Connection con = Get_Conection.getConnection();
+                  PreparedStatement ps = con.prepareStatement(sql))
+            
+                  {  
+                    ps.setString(1,udao.getEmail());
+                    ResultSet rs= ps.executeQuery();
+                    if (rs.next()) 
+                    {
+                       
+                        String encrypt=rs.getString("password");
+                        String decrypt=decrypt(encrypt);
+                 
+                        udao.setName(rs.getString("name"));
+                        udao.setEmail(rs.getString("email"));
+                        udao.setPassword(decrypt);
+                        udao.setContact(rs.getString("contact"));
+                        udao.setAddress(rs.getString("address"));
+                        //udao.setCity(rs.getString("city"));
+                        //udao.setUserid(rs.getString("userid"));
+                        b=true;    
+                    }
+                  }
+        return b;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     // Method to update employee information (you can implement this)
 //    public boolean update(UserDao dao) {
 //        boolean b = false;

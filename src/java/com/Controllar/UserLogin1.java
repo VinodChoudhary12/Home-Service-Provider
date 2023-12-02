@@ -33,9 +33,16 @@ public class UserLogin1 extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
+            String Electition = "Electition";
+            String AcRepair = "AcRepair";
+            String Carpainter = "Carpainter";
+            String Painter = "Painter";
+            String PestCntrol = "PestControl";
+            String Plumber = "Plumber";
+            String Water = "Water";
+            
             String email=request.getParameter("email");
-            String pass=request.getParameter("password");
-             
+            String pass=request.getParameter("password");   
              UserDao udao =new UserDao();
              udao.setEmail(email);
              udao.setPassword(pass);
@@ -43,6 +50,7 @@ public class UserLogin1 extends HttpServlet {
             UserDto udto =new UserDto();
             boolean b=udto.login(udao);
             if(b){
+                
                 HttpSession session=request.getSession();
                 session.setAttribute("name",udao.getName());
                 session.setAttribute("email",udao.getEmail());
@@ -52,10 +60,26 @@ public class UserLogin1 extends HttpServlet {
                 session.setAttribute("password",udao.getPassword());
                 session.setAttribute("image",udao.getImage());
                 session.setAttribute("userid", udao.getUserid());
-              response.sendRedirect("/UserHomePageLogin.jsp");
+                if( Electition.equals(request.getParameter("login")))
+                        response.sendRedirect("..//Services/Electrician_Booking_Page.jsp");
+                    else if( AcRepair.equals(request.getParameter("login")))
+                            response.sendRedirect("..//Services/Ac_Repair_Booking_Page.jsp");
+                    else if( Carpainter.equals(request.getParameter("login")))
+                            response.sendRedirect("..//Services/Carpenter_Booking_Page.jsp");
+                    else if( Painter.equals(request.getParameter("login")))
+                            response.sendRedirect("..//Services/Painter_Booking_Page.jsp");
+                    else if( PestCntrol.equals(request.getParameter("login")))
+                            response.sendRedirect("..//Services/Pest_Control_Booking_Page.jsp");
+                    else if( Plumber.equals(request.getParameter("login")))
+                            response.sendRedirect("..//Services/Plumber_Booking_Page.jsp");
+                    else if( Water.equals(request.getParameter("login")))
+                            response.sendRedirect("..//Services/Water_Purifier_Booking_Page.jsp");
+                else
+                        response.sendRedirect("./User/UserHomePageLogin.jsp");
             }
             else{
-            response.sendRedirect("/LoginUser.jsp");
+               
+            response.sendRedirect("./User/LoginUser.jsp");
               
             }
             

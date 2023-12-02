@@ -10,19 +10,38 @@
         <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            #login{
+                border: none;
+                border-radius: 10px;
+                margin-left: 50px;
+                width: 250px;
+                height: 40px;
+                background-color:rgb(255,193,7); 
+                font-size: 18px;
+                
+            }
+        </style>
     </head>
     <body>
-        <div class="container">
-            <div class="cover">
+        <%
+                     
+            String s =  request.getParameter("name");
+            System.out.println(s);
+               
+%>
+                 <div class="container">
+                <div class="cover">
                 <div class="front">
                     <img src="plumber2.jpg" alt="">
                 </div>
-            </div>
-            <div class="forms" >
+                </div>
+            <!--out.print(request.getParameter(""+"================"+"Electiction"));--> 
+                <div class="forms" >
                 <div class="form-content">
                     <div class="login-form">
                         <div class="title">Login</div>
-                        <form action="UserLogin1">
+                        <form  action="../UserLogin1">
                             <div class="input-boxes">
                                 <div class="input-box">
                                     <i class="fas fa-envelope"></i>
@@ -34,8 +53,7 @@
                                 </div>
                                 <div class="text"><a href="#">Forgot password?</a></div>
                                 <div class="button input-box">
-                                    <input type="submit" value="login">
-                                </div>
+                                    <button id="login"> Login   <input   type="hidden" value="<%=s%>" name="login"></button>                                </div>
                                 <div class="text sign-up-text">
                                     Don't have an account? <a href="RegistrationUser.jsp"><label>Sigup now</label></a>
                                 </div>
@@ -44,6 +62,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+          </div>
+
     </body>
 </html>

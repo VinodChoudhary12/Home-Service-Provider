@@ -76,15 +76,11 @@
     z-index: -1;
    
   }
-  
-  
-  
+
   .featured-services .icon {
     margin-bottom: 15px;
     margin-left: 20px;
-   
   }
-  
   .featured-services .icon i {
     font-size: 48px;
     line-height: 1;
@@ -152,7 +148,7 @@ float: right;
   width: 100%;
   height: 700px;
 }
-@media screen and (min-width:360px) {
+    @media screen and (min-width:360px) {
   
   #con3{
     width: 100%;
@@ -281,10 +277,10 @@ float: right;
         <div  class="col-md-6 col-lg-3 d-flex align-items-stretch  mb-5 mb-lg-0" id="css">
           <div class="icon-box" id="col2" >
             <div class="icon"><img src="Electric2.jpg" style="width: 100%; height: 80px;" alt=""></div>
-            <h4 class="title"><a href="Electrician_Booking_Page.jsp"> ELECTRICIAN</a></h4>
+            <h4 class="title"><a href="..//Services/ElectictionBookinWithoutLogin.jsp"> ELECTRICIAN</a></h4>
            
           
-            <a href="ElectictionBookinWithoutLogin.jsp" class="btn btn-warning ms-2">BOOK</a>
+            <a href="..//Services/ElectictionBookinWithoutLogin.jsp" class="btn btn-warning ms-2">BOOK</a>
           </div>
         </div>
 
@@ -292,29 +288,29 @@ float: right;
         <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
           <div class="icon-box"  id="col2" >
             <div class="icon"><img src="plumber1.jpg" style="width: 100%; height: 80px;" alt=""></div>
-            <h4 class="title"><a href="LoginUser.jsp"> PLUMBER</a></h4>
+            <h4 class="title"><a href="..//Services/PlumberBookinWithoutLogin.jsp"> PLUMBER</a></h4>
            
           
-            <a href="LoginUser.jsp" class="btn btn-warning ms-2">BOOK</a>
+            <a href="..//Services/PlumberBookinWithoutLogin.jsp" class="btn btn-warning ms-2">BOOK</a>
           </div>
         </div>
         
         <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
           <div class="icon-box"  id="col2" >
             <div class="icon"><img src="https://joboyindia.s3.amazonaws.com/jobservice/ac-service-in-bangalore.png"style="width: 100%; height: 80px;" alt=""></div>
-            <h4 class="title"><a href="LoginUser.jsp">AC REPAIR</a></h4>
+            <h4 class="title"><a href="..//Services/ACRepairWhithoutBooking.jsp">AC REPAIR</a></h4>
          
-            <a href="LoginUser.jsp" class="btn btn-warning ms-2">BOOK</a>
+            <a href="..//Services/ACRepairWhithoutBooking.jsp" class="btn btn-warning ms-2">BOOK</a>
           </div>
         </div>
 
         <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
           <div class="icon-box"  id="col2">
             <div class="icon"><img src="https://joboyindia.s3.amazonaws.com/jobservice/carpenter-in-bangalore.png"  style="width: 100%; height: 80px;"  alt=""></div>
-            <h4 class="title"><a href="LoginUser.jsp">CARPENTER</a></h4>
+            <h4 class="title"><a href="..//Services/CarpainterBookingWithout.jsp">CARPENTER</a></h4>
            
             
-            <a href="LoginUser.jsp" class="btn btn-warning ms-2">BOOK</a>
+            <a href="..//Services/CarpainterBookingWithout.jsp" class="btn btn-warning ms-2">BOOK</a>
           </div>
         </div>
 
@@ -326,27 +322,27 @@ float: right;
             <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
               <div class="icon-box"  id="col2" >
                 <div class="icon"><img src="https://joboyindia.s3.amazonaws.com/jobservice/painter-in-bangalore.png" style="width: 100%; height: 80px;" alt=""></div>
-                <h4 class="title"><a href="LoginUser.jsp"> PAINTER</a></h4>
+                <h4 class="title"><a href="..//Services/PainterBookingWithout.jsp"> PAINTER</a></h4>
               
-                <a href="LoginUser.jsp" class="btn btn-warning ms-2 ">BOOK</a>
+                <a href="..//Services/PainterBookingWithout.jsp" class="btn btn-warning ms-2 ">BOOK</a>
               </div>
             </div>
   
             <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 ms-2 mb-lg-0">
               <div class="icon-box"  id="col2" >
                 <div class="icon mb-0"><img src="https://joboyindia.s3.amazonaws.com/jobservice/pest-control-in-trivandrum.png" style="width: 85%; height: 80px; margin-top: -6px;"alt=""></div>
-                <h4 class="title"><a href="LoginUser.jsp">PEST CONTROL</a></h4>
+                <h4 class="title"><a href="..//Services/PestControlBookingWithout.jsp">PEST CONTROL</a></h4>
               
-                <a href="LoginUser.jsp" class="btn btn-warning ms-2 ">BOOK</a>
+                <a href="..//Services/PestControlBookingWithout.jsp" class="btn btn-warning ms-2 ">BOOK</a>
               </div>
             </div>
             
             <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 ms-1 mb-lg-0">
               <div class="icon-box"  id="col2" >
                 <div class="icon mb-0"><img src="https://joboyindia.s3.amazonaws.com/jobservice/Water-Purifier.png" style="width: 100%; height: 80px; margin-top: -6px;" alt=""></div>
-                <h4 class="title"><a href="LoginUser.jsp">WATER PURIFIER</a></h4>
+                <h4 class="title"><a href="..//Services/WaterPurifierBookingWithout.jsp">WATER PURIFIER</a></h4>
               
-                <a href="LoginUser.jsp" class="btn btn-warning ms-2">BOOK</a>
+                <a href="..//Services/WaterPurifierBookingWithout.jsp" class="btn btn-warning ms-2">BOOK</a>
               </div>
             </div>
             

@@ -1,3 +1,12 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ page import="java.sql.Connection" %>
+<%@ page import="java.sql.PreparedStatement" %>
+<%@ page import="java.sql.ResultSet" %>
+<%@ page import="java.sql.SQLException" %>
+<%@ page import="java.sql.DriverManager" %>
+<%@ page import="jakarta.servlet.http.HttpSession" %>
+<%@ page import="java.io.IOException" %>
+<%@page import="com.Model.UserDao" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +18,18 @@
    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-</head>
+
+<%  
+       
+        String name=(String)session.getAttribute("name");
+        String email=(String)session.getAttribute("email");
+        String contact=(String)session.getAttribute("contact");
+        String address=(String)session.getAttribute("address");
+        String city=(String)session.getAttribute("city");
+        if(email==null){
+        response.sendRedirect("LoginUser.jsp");
+    }
+%>    
 <style>
     
 #navbar1{
@@ -130,7 +150,186 @@ float: right;
   }
 } 
 </style>
+<script>
+    function fun()
+    {
+      var pro=document.getElementById("profile");
+      var edit=document.getElementById("Edit");
+        pro.style.display="none";
+        edit.style.display="block";
+      
+    }
+        function validateName() {
+                var name = document.getElementById("name").value;
+                var display = document.getElementById("dname");
+                var reg=/^[a-zA-z]+ [a-zA-Z]+$/;
+                var reg2=/^[a-zA-z]+$/;
+                var reg3=/^[^\d]$/;
+                if (name.trim() === "") {
+                    display.innerHTML = "*";
+                    display.style.color = "red";
+//                    return false;
+                }
+                else if(reg2.test(name)){
+                    display.innerHTML= "";
+                }
+                else if(reg3.test(name))
+                {
+                    display.innerHTML = "number not allowed";
+                    
+                }
+                else if(reg.test(name)){
+                    display.innerHTML = "";
+//                    return true;
+                }
+                
+                else
+                {
+                    display.innerHTML = "Enter Correct name";
+                }
+            }
 
+            
+
+             function validateEmail() {
+                var email = document.getElementById("email").value;
+                var display = document.getElementById("demail");
+                var reg=/^[A-Za-z0-9]+@gmail.com$/;
+                if (email.trim() === "") {
+                    display.innerHTML = "*";
+                    display.style.color = "red";
+//                    return false;
+                } 
+                else if(reg.test(email)) {
+                    display.innerHTML = "";
+//                    return true;
+                }
+                else
+                {
+                    display.innerHTML = "Enter Correct Email";
+                }
+            }
+
+
+
+            function validateMobile() {
+                var mobile = document.getElementById("mobile").value;
+                var display = document.getElementById("dmobile");
+                var reg=/^[6789]\d{9}$/;
+                if (mobile.trim() === "") {
+                    display.innerHTML = "*";
+                    display.style.color = "red";
+//                    return false;
+                }
+                else
+                {if(reg.test(mobile)){
+                    display.innerHTML = "";
+                }
+                else {
+                    display.style.color = "red";
+                    display.innerHTML = "Enter Correct Mobile No.";
+//                    return true;
+                }
+            }   
+            }
+//        
+           function validateForm() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var mobile = document.getElementById("mobile").value;
+            var address = document.getElementById("address").value;
+            var isValid = true;
+//
+//            // Validation functions
+            function validateName() {
+                var reg=/^[a-zA-z]+ [a-zA-Z]+$/;
+                var display = document.getElementById("dname");
+//                
+                if (name.trim() === "") {
+                    display.innerHTML = "Enter Name";
+                    display.style.color = "red";
+                    isValid = false;
+                } 
+                else if(reg.test(name)){
+                    display.innerHTML = "";
+                    //                    return true;
+                }
+                else
+                {
+                    display.innerHTML = "Enter Correct name";
+                    isValid = false;
+                }
+            }
+            function validateEmail() {
+                var display = document.getElementById("demail");
+                var reg=/^[A-Za-z0-9]+@gmail.com$/;
+                if (email.trim() === "") {
+                    display.innerHTML = "Enter Email";
+                    display.style.color = "red";
+                    isValid = false;
+                }
+                else if(reg.test(email)) {
+                    display.innerHTML = "";
+                    //                    return true;
+                }
+                else
+                {
+                    display.innerHTML = "Enter Correct Email";
+                    isValid = false;
+                }
+            }
+            function validateAddress()
+            {
+               
+                var display = document.getElementById("daddress");
+                var reg=/^[a-zA-z]+ [a-zA-Z]+$/;
+                var reg2=/^[a-zA-z]+$/;
+                var reg3=/^[^\d]$/;
+                if (address.trim() === "") {
+                    display.innerHTML = "*";
+                    display.style.color = "red";
+//                    return false;
+                }
+                else if(reg2.test(address)){
+                    display.innerHTML= "";
+                }
+                
+            }
+            function validateMobile() {
+                var display = document.getElementById("dmobile");
+                var reg=/^[6789]\d{9}$/;
+                if (mobile.trim() === "") {
+                    display.innerHTML = "Enter Mobile";
+                    display.style.color = "red";
+                    isValid = false;
+                }
+                else
+                {if(reg.test(mobile)){
+                    display.innerHTML = "";
+                    display.style.color = "red";
+                }
+                else {
+                    //                    return true;
+                    display.innerHTML = "Enter Correct Mobile No.";
+                    isValid = false;
+//                    return true;
+//                    return true;
+                }
+            }
+            }
+//            // Call validation functions
+            validateName();
+          
+            validateEmail();
+   
+            validateMobile();
+            
+            validateAddress();
+//
+                return isValid;
+        }
+</script> 
+</head>
 <body>
     
   <nav id="navbar12" class="navbar navbar-expand-lg navbar-light" style="background-color:white;">
@@ -149,22 +348,14 @@ float: right;
                   MY ACCOUNT
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-               
-                
 
-        
                 </li>
                 <li><a class="dropdown-item" href="MyOrder.jsp">MY ORDERS</a></li>
               <li><a class="dropdown-item" href="homep2project.jsp">LOGOUT</a></li>  
               </ul>
             </li>
           </button>
-<!--          <li class="nav-item">
-            <a href=""class="nav-link active" id="navbar1" aria-current="page" href="#"><i class="fa-solid fa-magnifying-glass" style="color: #050505;"></i></a>
 
-            
-          </li>-->
-            
           <li class="nav-item">
             <a class="nav-link active" id="navbar2" aria-current="page" href="">HOME</a>
           </li>
@@ -178,9 +369,7 @@ float: right;
           <li class="nav-item">
             <a class="nav-link active" id="navbar2" aria-current="page" href="#Contact_US">CONTACT US</a>
           </li>
-<!--          <li class="nav-item">
-            <a class="nav-link active" id="navbar2" aria-current="page" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-          </li>-->
+
         </ul>
         <button class="btn  me-5" style="font-size: 40px;" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="fas fa-user-circle"></i></button>
 
@@ -198,28 +387,56 @@ float: right;
               <input type="file">
               
           </div><br>
-          <div class="form-row " >
+          <div class="form-row " id="profile" >
+<!--              <div class="form-group col-md-10 ms-3 ">
+                  <input type="text" class="form-control form-control-sm" value=""  readonly>
+              </div><br>-->
               <div class="form-group col-md-10 ms-3 ">
-                  <input type="text" class="form-control form-control-sm" value="Name" readonly>
+                  <input type="text" class="form-control form-control-sm" value="<%= name %>"  readonly>
               </div><br>
               <div class="form-group col-md-10 ms-3" >
-                  <input type="text" class="form-control form-control-sm" value="Father Name" readonly>
+                  <input type="text" class="form-control form-control-sm" value="<%= email %>" readonly>
               </div><br>
               <div class="form-group col-md-10 ms-3">
-                  <input type="text" class="form-control form-control-sm" value="Email" readonly>
+                  <input type="text" class="form-control form-control-sm" value="<%= contact %> " readonly>
               </div><br>
               <div class="form-group col-md-10 ms-3">
-                  <input type="text" class="form-control form-control-sm" value="Password" readonly>
+                  <input type="text" class="form-control form-control-sm" value="<%= city %>" readonly>
               </div><br>
               <div class="form-group col-md-10 ms-3">
-                  <input type="text" class="form-control form-control-sm" value="Address" readonly>
+                  <input type="text" class="form-control form-control-sm" value="<%= address %>" readonly>
               </div><br>
-              
+             
               <div class="form-group col-md-10 ms-5">
                   <!--<input type="text" class="form-control form-control-sm" value="Adhar Number" readonly>-->
-                  <button class="btn btn-warning  ms-5 mb-3">Edit</button>
-              </div>
+                  <button onclick="fun()"  class="btn btn-warning  ms-5 mb-3">Edit</button>
+              </div>  
           </div>
+  <form action="../UserUpdate" method="post">
+    <div class="form-row" id="Edit" style="display:none;">
+        <div class="form-group col-md-10 ms-3">
+            <input type="text" onkeyup="validateName()" id="name" name="name" class="form-control form-control-sm" value="<%= name %>" />
+            <label id="dname"></label>
+        </div><br />
+        <div class="form-group col-md-10 ms-3">
+            <input type="text" onkeyup="validateEmail()" id="email" name="email" class="form-control form-control-sm" value="<%= email %>" />
+            <label id="demail"></label>
+        </div><br />
+        <div class="form-group col-md-10 ms-3">
+            <input type="text" onkeyup="validateMobile()" id="mobile" name="contact" class="form-control form-control-sm" value="<%= contact %>" />
+            <label id="dmobile"></label>
+        </div><br />
+        <div class="form-group col-md-10 ms-3">
+            <input type="text" onkeyup="validateAddress()" id="address" name="address" class="form-control form-control-sm" value="<%= address %>" />
+            <label id="daddress"></label>
+        </div><br />
+        <div class="form-group col-md-10 ms-5">
+            <!--<input type="text" class="form-control form-control-sm" value="Adhar Number" readonly>-->
+            <!--<button type="submit" >Submit</button>-->
+            <input id="button" class="btn btn-warning ms-5 mb-3" type="submit" name="submit" value="Submit" />
+        </div>
+    </div>
+</form>
       </div>
   </div>
   </div>
@@ -293,7 +510,7 @@ float: right;
             <h4 class="title"><a href=""> ELECTRICIAN</a></h4>
            
           
-            <a href="Electrician_Booking_Page.jsp" class="btn btn-warning ms-2">BOOK</a>
+            <a href="..//Services/Electrician_Booking_Page.jsp" class="btn btn-warning ms-2">BOOK</a>
           </div>
         </div>
 
@@ -303,21 +520,21 @@ float: right;
             <h4 class="title"><a href=""> PLUMBER</a></h4>
            
           
-            <a href="Plumber_Booking_Page.jsp" class="btn btn-warning ms-2">BOOK</a>
+            <a href="..//Services/Plumber_Booking_Page.jsp" class="btn btn-warning ms-2">BOOK</a>
           </div>
         </div>
         <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
           <div class="icon-box"  id="col2" >
             <div class="icon"><img src="https://joboyindia.s3.amazonaws.com/jobservice/ac-service-in-bangalore.png"style="width: 100%; height: 80px;" alt=""></div>
             <h4 class="title"><a href="">AC REPAIR</a></h4>
-            <a href="Ac_Repair_Booking_Page.jsp" class="btn btn-warning ms-2">BOOK</a>
+            <a href="..//Services/Ac_Repair_Booking_Page.jsp" class="btn btn-warning ms-2">BOOK</a>
           </div>
         </div>
         <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
           <div class="icon-box"  id="col2">
             <div class="icon"><img src="https://joboyindia.s3.amazonaws.com/jobservice/carpenter-in-bangalore.png"  style="width: 100%; height: 80px;"  alt=""></div>
             <h4 class="title"><a href="">CARPENTER</a></h4>
-            <a href="Carpenter_Booking_Page.jsp" class="btn btn-warning ms-2">BOOK</a>
+            <a href="..//Services/Carpenter_Booking_Page.jsp" class="btn btn-warning ms-2">BOOK</a>
           </div>
         </div>
         <div class="row">   
@@ -328,7 +545,7 @@ float: right;
                 <div class="icon"><img src="https://joboyindia.s3.amazonaws.com/jobservice/painter-in-bangalore.png" style="width: 100%; height: 80px;" alt=""></div>
                 <h4 class="title"><a href=""> PAINTER</a></h4>
               
-                <a href="Painter_Booking_Page.jsp" class="btn btn-warning ms-2 ">BOOK</a>
+                <a href="..//Services/Painter_Booking_Page.jsp" class="btn btn-warning ms-2 ">BOOK</a>
               </div>
             </div>
   
@@ -337,7 +554,7 @@ float: right;
                 <div class="icon mb-0"><img src="https://joboyindia.s3.amazonaws.com/jobservice/pest-control-in-trivandrum.png" style="width: 85%; height: 80px; margin-top: -6px;"alt=""></div>
                 <h4 class="title"><a href="">PEST CONTROL</a></h4>
               
-                <a href="Pest_Control_Booking_Page.jsp" class="btn btn-warning ms-2 ">BOOK</a>
+                <a href="..//Services/Pest_Control_Booking_Page.jsp" class="btn btn-warning ms-2 ">BOOK</a>
               </div>
             </div>
             
@@ -346,7 +563,7 @@ float: right;
                 <div class="icon mb-0"><img src="https://joboyindia.s3.amazonaws.com/jobservice/Water-Purifier.png" style="width: 100%; height: 80px;  margin-top: -6px;" alt=""></div>
                 <h4 class="title"><a href="">WATER PURIFIER</a></h4>
               
-                <a href="Water_Purifier_Booking_Page.jsp" class="btn btn-warning ms-2">BOOK</a>
+                <a href="..//Services/Water_Purifier_Booking_Page.jsp" class="btn btn-warning ms-2">BOOK</a>
               </div>
             </div>
             
